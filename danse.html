@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danse Macabre</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Satisfy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lilita+One&family=Satisfy&display=swap" rel="stylesheet">
+</head>
+<body class="d-flex flex-column vh-100">
+
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <img class="icon-img" src="images/ict logo.png" alt="ict logo">
+          <a class="navbar-brand ps-4 fs-3 fw-4" href="#">ICT Public Library</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav fs-5 me-auto mb-2 mb-lg-0 ms-5 ps-5">
+              <li class="nav-item navbar-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item navbar-item">
+                <a class="nav-link" href="#">Events</a>
+              </li>
+              <li class="nav-item navbar-item">
+                <a class="nav-link" href="books.html">Books</a>
+              </li>
+              <li class="nav-item navbar-item">
+                <a class="nav-link" href="#">Our Services</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                More
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">About Us</a></li>
+                  <li><a class="dropdown-item" href="#">Contact Us</a></li>
+                </ul>
+              </li>
+              <li class="nav-item navbar-item">
+                <a class="nav-link ms-5" href="login.html">Log In / Register</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Content  -->
+
+      <div class="container my-5">
+        <div class="row p-2 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+          
+          <div class="col-lg-2 offset-lg-1 p-0 overflow-hidden shadow-lg mb-5 ">
+              <img class="rounded-3" src="images/danse.jpg" alt="" width="220px" height="200px">
+          </div>
+
+          <div class="content col-lg-9 p-3 p-lg-5 pt-lg-3 text-success">
+            <h1 class="title-book lead fw-bold text-center m-3 fs-1 fw-1 text-success">Danse Macabre</h1>
+            <p class="fw-bold text-dark">Danse Macabre is a 1981 non-fiction book by Stephen King, about horror fiction in print, TV, radio, film and comics, and the influence of contemporary societal fears and anxieties on the genre. When the book was republished King included a new Forenote dated June 1983 (however not all subsequent editions have included this forenote). And when the book was republished on February 23, 2010, it included an additional new forenote in the form of a longer essay (7,700 words) entitled "What's Scary".</p>
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- Recommendations -->
+
+      <div class="container-fluid">
+    <h1 class="fw-bold fs-3 text-center mt-5" style="color: #65B741;">You may also like these!!</h1>
+        <div class="container card-border text-center mt-5">
+          <div class="row align-items-start">
+            <div class="col-md-4 mb-5">
+              <div class="card">
+                <a href="#" class="btn text-white" style="background-color: #3c6b27;"><img src="images/Roadwork.jpg" width="70px" height="350px" class="card-img-top" alt="book image"></a>               
+              </div>
+            </div>
+            <div class="col-md-4 mb-5 ">
+              <div class="card">
+                <a href="#" class="btn text-white" style="background-color: #3c6b27;"><img src="images/ghost story.jpg" width="70px" height="350px" class="card-img-top" alt="book image"></a>
+              </div>
+            </div>
+            <div class="col-md-4 mb-5 ">
+                <div class="card">
+                  <a href="#" class="btn text-white" style="background-color: #3c6b27;"><img src="images/rage.jpg" width="70px" height="350px" class="card-img-top" alt="book image"></a>                  
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+
+
+     
+      <!-- footer -->
+
+      <footer class="py-3 my-4 mt-auto footer">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-4">
+          <li class="nav-item fw-bold"><a href="/" class="nav-link text-white text-body-secondary">Home</a></li>
+          <li class="nav-item fw-bold"><a href="#" class="nav-link text-white text-body-secondary">Features</a></li>
+          <li class="nav-item fw-bold"><a href="#" class="nav-link text-white text-body-secondary">Pricing</a></li>
+          <li class="nav-item fw-bold"><a href="#" class="nav-link text-white text-body-secondary">About Us</a></li>
+        </ul>
+        <p class="text-center text-body-secondary">© 2024 Company, Inc. All rights reserved.</p>
+      </footer>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body{
+    height: 100%;
+}
+.navbar{
+    background-color: #65B741 !important;
+}
+.navbar-brand{
+    font-family: 'Lilita One', sans-serif;
+    color: #fff !important;
+}
+.icon-img{
+    width: 80px;
+    height: 60px;
+}
+.navbar-item{
+    font-weight: 500 !important;
+}
+.navbar-item :hover{
+    color: #fff !important;
+    background-color: #3c6b27;
+    border-radius: 10px;
+}
+.dropdown-menu :hover{
+    color: #fff !important;
+    background-color: #3c6b27 !important;
+ 
+}
+.signin{
+    text-decoration: none;
+    color: red;
+}
+.btn{
+    color: #fff !important;
+}
+.title{
+    font-family: 'Abril Fatface', serif;
+    color: #5ea93c !important;
+}
+.title-explore{
+    height: 100px;
+    background-color: #65B741;
+    font-family: 'Roboto Slab', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-id{
+    height: 350px;
+    box-shadow: 20px 20px 50px grey;
+}
+.card{
+    height: 350px;
+    box-shadow: 20px 20px 50px grey;
+}
+.card:hover{
+    opacity: 0.8;
+    transition: 0.2s;
+    border: 3px solid #65B741;
+    cursor: default;
+}
+.card-title{
+    color: #65B741;
+}
+.footer{
+    background-color: #65B741;
+}
