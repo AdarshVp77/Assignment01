@@ -23,10 +23,17 @@ function validation() {
 
   // Phone Validation
 
-  let phoneCheck = /^([0-9]{3}[-. ]){2}([0-9]{4})$/;
-  let phoneCheck1 = /^[0-9]{10}$/;
+  let phoneCheck = /^([0-9]{3}[-]){2}([0-9]{4})$/;
+  let phoneCheck1 = /^([0-9]{3}[.]){2}([0-9]{4})$/;
+  let phoneCheck2 = /^([0-9]{3}[ ]){2}([0-9]{4})$/;
+  let phoneCheck3 = /^[0-9]{10}$/;
 
-  if (!phoneCheck.test(phone) && !phoneCheck1.test(phone)) {
+  if (
+    !phoneCheck.test(phone) &&
+    !phoneCheck1.test(phone) &&
+    !phoneCheck2.test(phone) &&
+    !phoneCheck3.test(phone)
+  ) {
     phonevalid.innerHTML = "⚠️Please enter a valid phone number.";
     phonevalid.style.color = "red";
     return false;
