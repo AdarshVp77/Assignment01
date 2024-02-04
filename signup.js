@@ -49,6 +49,7 @@ function validation() {
   if (strongPasswordCheck.test(pass)) {
     passwordStrength.innerHTML = "✅High Strength. Secure password.";
     passwordStrength.style.color = "green";
+    return true;
   }
   if (mediumPasswordCheck.test(pass)) {
     passwordStrength.innerHTML =
@@ -93,6 +94,11 @@ function validation() {
   }
   if (pass.length == 0) {
     passwordStrength.innerHTML = "⚠️Required Field.";
+    passwordStrength.style.color = "red";
+    return false;
+  } else {
+    passwordStrength.innerHTML =
+      "⚠️Please enter a valid password. No special characters or spaces are allowed.";
     passwordStrength.style.color = "red";
     return false;
   }

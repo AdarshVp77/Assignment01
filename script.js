@@ -24,17 +24,17 @@ function validate() {
   // Password Validation
 
   let strongPasswordRegex =
-    /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[A-Za-z0-9]{8,}$/;
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[A-Za-z0-9]{8,16}$/;
   let mediumPasswordRegex = /^(?=.*[a-z])(?=.*[0-9])[a-z0-9]{2,}$/;
   let mediumPasswordRegex1 = /^(?=.*[A-Z])(?=.*[0-9])[A-Z0-9]{2,}$/;
   let mediumPasswordRegex2 = /^(?=.*[a-z])(?=.*[A-Z])[a-zA-Z]{2,}$/;
   let poorPasswordRegex = /^(?=.*[a-z])[a-z]{1,}$/;
   let poorPasswordRegex1 = /^(?=.*[A-Z])[A-Z]{1,}$/;
   let poorPasswordRegex2 = /^(?=.*[0-9])[0-9]{1,}$/;
-
   if (strongPasswordRegex.test(password)) {
     passStrength.innerHTML = "✅High Strength. Secure password.";
     passStrength.style.color = "green";
+    return true;
   }
   if (mediumPasswordRegex.test(password)) {
     passStrength.innerHTML =
@@ -77,6 +77,11 @@ function validate() {
   }
   if (password.length == 0) {
     passStrength.innerHTML = "⚠️Required Field.";
+    passStrength.style.color = "red";
+    return false;
+  } else {
+    passStrength.innerHTML =
+      "⚠️Please enter a valid password. No special characters or spaces allowed.";
     passStrength.style.color = "red";
     return false;
   }
