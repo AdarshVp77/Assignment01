@@ -35,30 +35,16 @@ function validation() {
     phonevalid.style.color = "green";
   }
 
-  // let phoneCheck1 = /^[0-9]{3}-[0-9]{3}-[0-9]{4}$/;
-  // let phoneCheck2 = /^[0-9]{3}.[0-9]{3}.[0-9]{4}$/;
-  // let phoneCheck3 = /^[0-9]{3} [0-9]{3} [0-9]{4}$/;
-
-  // if (
-  //   !phoneCheck1.test(phone) &&
-  //   !phoneCheck2.test(phone) &&
-  //   !phoneCheck3.test(phone) &&
-  //   !phoneCheck4.test(phone)
-  // ) {
-  //   phonevalid.innerHTML = "⚠️Please enter a valid phone number";
-  //   phonevalid.style.color = "red";
-  //   return false;
-  // } else {
-  //   phonevalid.innerHTML = "✅Valid phone number";
-  //   phonevalid.style.color = "green";
-  // }
-
   // Password Validation
 
   let strongPasswordCheck =
     /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[A-Za-z0-9]{8,}$/;
   let mediumPasswordCheck = /^(?=.*[a-z])(?=.*[0-9])[a-z0-9]{2,}$/;
+  let mediumPasswordCheck1 = /^(?=.*[A-Z])(?=.*[0-9])[A-Z0-9]{2,}$/;
+  let mediumPasswordCheck2 = /^(?=.*[a-z])(?=.*[A-Z])[a-zA-Z]{2,}$/;
   let poorPasswordCheck = /^(?=.*[a-z])[a-z]{1,}$/;
+  let poorPasswordCheck1 = /^(?=.*[A-Z])[A-Z]{1,}$/;
+  let poorPasswordCheck2 = /^(?=.*[0-9])[0-9]{1,}$/;
 
   if (strongPasswordCheck.test(pass)) {
     passwordStrength.innerHTML = "✅High Strength. Secure password.";
@@ -70,9 +56,32 @@ function validation() {
     passwordStrength.style.color = "orange";
     return false;
   }
+  if (mediumPasswordCheck1.test(pass)) {
+    passwordStrength.innerHTML =
+      "🔶Medium Strength. Please enter a small letter.";
+    passwordStrength.style.color = "orange";
+    return false;
+  }
+  if (mediumPasswordCheck2.test(pass)) {
+    passwordStrength.innerHTML = "🔶Medium Strength. Please enter a number.";
+    passwordStrength.style.color = "orange";
+    return false;
+  }
   if (poorPasswordCheck.test(pass)) {
     passwordStrength.innerHTML =
       "⚠️Poor Strength. Please enter a captial letter and a number.";
+    passwordStrength.style.color = "red";
+    return false;
+  }
+  if (poorPasswordCheck1.test(pass)) {
+    passwordStrength.innerHTML =
+      "⚠️Poor Strength. Please enter a small letter and a number.";
+    passwordStrength.style.color = "red";
+    return false;
+  }
+  if (poorPasswordCheck2.test(pass)) {
+    passwordStrength.innerHTML =
+      "⚠️Poor Strength. Please enter a captial letter and a small letter.";
     passwordStrength.style.color = "red";
     return false;
   }
