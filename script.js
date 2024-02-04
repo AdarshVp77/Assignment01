@@ -24,7 +24,7 @@ function validate() {
   // Password Validation
 
   let strongPasswordRegex =
-    /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[A-Za-z0-9]{8,16}$/;
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[A-Za-z0-9]{8,}$/;
   let mediumPasswordRegex = /^(?=.*[a-z])(?=.*[0-9])[a-z0-9]{2,}$/;
   let mediumPasswordRegex1 = /^(?=.*[A-Z])(?=.*[0-9])[A-Z0-9]{2,}$/;
   let mediumPasswordRegex2 = /^(?=.*[a-z])(?=.*[A-Z])[a-zA-Z]{2,}$/;
